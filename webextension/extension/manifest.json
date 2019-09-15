@@ -1,0 +1,33 @@
+{
+	"name": "unLibra",
+	"version": "1.0.1",
+	"description": "Display waifus associated with social media profiles",
+	"manifest_version": 2,
+	"background":{
+		"scripts":["bg.js"]
+        },
+	"browser_action": {
+		"default_icon": {
+			"16": "icons/16.png",
+			"24": "icons/24.png",
+			"32": "icons/32.png"
+		},
+		"default_title": "WaifuChain",
+		"default_popup": "popup/index.html"
+	},
+	"icons": {
+		"16": "icons/16.png",
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["https://www.facebook.com/*"],
+			"js": ["contentScripts/twitter/web3.min.js", "contentScripts/twitter/index.js", "dist/twitter.js"],
+			"css": ["contentScripts/twitter/styles.css"]
+		}
+	],
+	"permissions": [
+		"activeTab"
+	]
+}
