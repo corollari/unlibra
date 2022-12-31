@@ -4,7 +4,7 @@
   "description": "Display waifus in social media profiles",
   "main": "index.js",
   "dependencies": {
-    "metamask-extension-provider": "1.1.0",
+    "metamask-extension-provider": "3.0.0",
     "web3": "1.0.0-beta.37"
   },
   "devDependencies": {},
